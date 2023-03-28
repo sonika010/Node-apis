@@ -5,7 +5,7 @@ const dataSchema = require('../model/model');
 
 
 
-//Post Method
+//Post Method apis
 
 router.post('/post', async (req, res) => {
     const data = new dataSchema({
@@ -23,7 +23,7 @@ router.post('/post', async (req, res) => {
     }
 })
 
-//Get all Method
+//Get all Method Apis
 router.get('/getAll', async (req, res) => {
     try{
         const data = await dataSchema.find();
@@ -35,7 +35,7 @@ router.get('/getAll', async (req, res) => {
 })
 
 
-//Get by ID Method
+//Get by ID Method Apis
 router.get('/getOne/:id', async (req, res) => {
     try{
         const data = await dataSchema.findById(req.params.id);
@@ -47,7 +47,7 @@ router.get('/getOne/:id', async (req, res) => {
 })
 
 
-//Update by ID Method
+//Update by ID Method Apis
 router.patch('/update/:id', async (req, res) => {
     try {
         const id = req.params.id;
@@ -64,7 +64,7 @@ router.patch('/update/:id', async (req, res) => {
         res.status(400).json({ message: error.message })
     }
 })
-//Delete by ID Method
+//Delete by ID Method Apis
 router.delete('/delete/:id', async (req, res) => {
     try {
         const id = req.params.id;
