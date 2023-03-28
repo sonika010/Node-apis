@@ -5,7 +5,7 @@ const dataSchema = require('../model/model');
 
 
 
-//Post Method apis
+//Post Method (create apis with mongoose)
 
 router.post('/post', async (req, res) => {
     const data = new dataSchema({
